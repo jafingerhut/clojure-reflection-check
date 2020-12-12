@@ -28,7 +28,8 @@ fi
 CLJ_VERSION="$1"
 LOG_DIR="$2"
 
-LOGF="${LOG_DIR}/build-log-${CLJ_VERSION}.txt"
+LOG1="${LOG_DIR}/build-log-${CLJ_VERSION}.txt"
+LOG2="${LOG_DIR}/summary-${CLJ_VERSION}.txt"
 
-${INSTALL_DIR}/build2.sh "${CLJ_VERSION}" |& tee "${LOGF}"
-${INSTALL_DIR}/analyze-log.sh "${LOGF}"
+${INSTALL_DIR}/build2.sh "${CLJ_VERSION}" |& tee "${LOG1}"
+${INSTALL_DIR}/analyze-log.sh "${LOG1}" |& tee "${LOG2}"

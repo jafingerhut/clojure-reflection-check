@@ -30,11 +30,13 @@ CLJ_VERSION="$1"
 
 # Show versions of everything relevant to the build
 
+echo "VERSION INFO BEGIN"
 set -ex
 uname -a
 lsb_release -a
 java -version
 mvn -version
+echo "VERSION INFO END"
 
 if [ ! -d clojure ]
 then

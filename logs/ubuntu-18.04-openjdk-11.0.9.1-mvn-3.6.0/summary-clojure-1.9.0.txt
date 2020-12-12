@@ -1,0 +1,204 @@
+
+----------------------------------------------------------------------
+Software version info
+----------------------------------------------------------------------
+VERSION INFO BEGIN
++ uname -a
+Linux andyvm 5.4.0-54-generic #60~18.04.1-Ubuntu SMP Fri Nov 6 17:25:16 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
++ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.5 LTS
+Release:	18.04
+Codename:	bionic
++ java -version
+openjdk version "11.0.9.1" 2020-11-04
+OpenJDK Runtime Environment (build 11.0.9.1+1-Ubuntu-0ubuntu1.18.04)
+OpenJDK 64-Bit Server VM (build 11.0.9.1+1-Ubuntu-0ubuntu1.18.04, mixed mode, sharing)
++ mvn -version
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 11.0.9.1, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.0-54-generic", arch: "amd64", family: "unix"
++ echo 'VERSION INFO END'
+VERSION INFO END
+
+----------------------------------------------------------------------
+BUILD FAILURE
+----------------------------------------------------------------------
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+
+----------------------------------------------------------------------
+[ERROR]
+----------------------------------------------------------------------
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-antrun-plugin:1.6:run[m [1m(clojure-compile)[m on project [36mclojure[m: [1;31mAn Ant BuildException has occured: The following error occurred while executing this line:[m
+[[1;31mERROR[m] [1;31m/home/andy/clj/clojure-reflection-check/clojure-1.9.0/build.xml:52: Java returned: 1[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+----------------------------------------------------------------------
+'Recompile with' messages
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+WARNINGS:
+----------------------------------------------------------------------
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+----------------------------------------------------------------------
+[WARNING]
+----------------------------------------------------------------------
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[1535,21] Byte(byte) in java.lang.Byte has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[1545,28] Short(short) in java.lang.Short has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[1550,28] Character(char) in java.lang.Character has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[2178,20] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[2180,20] Float(float) in java.lang.Float has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[2182,20] Long(long) in java.lang.Long has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/ClassReader.java:[2184,20] Double(double) in java.lang.Double has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/GeneratorAdapter.java:[377,29] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/GeneratorAdapter.java:[391,29] Long(long) in java.lang.Long has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/GeneratorAdapter.java:[406,29] Float(float) in java.lang.Float has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/GeneratorAdapter.java:[421,29] Double(double) in java.lang.Double has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/InstructionAdapter.java:[685,29] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/InstructionAdapter.java:[693,29] Long(long) in java.lang.Long has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/InstructionAdapter.java:[702,29] Float(float) in java.lang.Float has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/InstructionAdapter.java:[711,29] Double(double) in java.lang.Double has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/commons/SerialVersionUIDAdder.java:[333,70] Long(long) in java.lang.Long has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[146,19] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[147,23] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[148,21] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[149,22] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[150,20] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[151,20] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/asm/Opcodes.java:[152,34] Integer(int) in java.lang.Integer has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/ASeq.java:[213,44] unchecked method invocation: method unmodifiableList in class java.util.Collections is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/ASeq.java:[213,45] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/ASeq.java:[213,45] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Atom.java:[21,22] unchecked call to AtomicReference(V) as a member of the raw type java.util.concurrent.atomic.AtomicReference
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Atom.java:[26,22] unchecked call to AtomicReference(V) as a member of the raw type java.util.concurrent.atomic.AtomicReference
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Atom.java:[39,39] unchecked call to compareAndSet(V,V) as a member of the raw type java.util.concurrent.atomic.AtomicReference
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Atom.java: Some input files additionally use unchecked or unsafe operations.
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1498,69] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1499,65] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1546,39] unchecked call to add(E) as a member of the raw type java.util.LinkedList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1675,53] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1676,49] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[1725,39] unchecked call to add(E) as a member of the raw type java.util.LinkedList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2480,50] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2524,84] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2542,79] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2570,45] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2571,41] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2577,42] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[288,75] unchecked cast
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2895,20] unchecked method invocation: method sort in class java.util.Arrays is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[2895,32] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[3990,43] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4060,73] unchecked cast
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4064,104] unchecked cast
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4823,86] unchecked cast
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4825,44] unchecked call to add(E) as a member of the raw type java.util.List
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4826,44] unchecked call to add(E) as a member of the raw type java.util.List
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[4989,50] newInstance() in java.lang.Class has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[5386,52] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[5387,55] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[6462,61] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[7087,99] unchecked cast
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[7902,28] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[7903,34] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8217,39] unchecked call to put(K,V) as a member of the raw type java.util.Map
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8447,40] unchecked call to put(K,V) as a member of the raw type java.util.Map
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8459,40] unchecked call to put(K,V) as a member of the raw type java.util.Map
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8677,44] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8677,44] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8715,51] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8906,45] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8907,43] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8945,32] unchecked method invocation: constructor <init> in class clojure.lang.Compiler.CaseExpr is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Compiler.java:[8946,82] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/DynamicClassLoader.java:[47,19] unchecked method invocation: method put in class java.util.concurrent.ConcurrentHashMap is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/DynamicClassLoader.java:[47,26] unchecked call to SoftReference(T,java.lang.ref.ReferenceQueue<? super T>) as a member of the raw type java.lang.ref.SoftReference
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/DynamicClassLoader.java:[47,26] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/EdnReader.java:[760,38] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/EdnReader.java:[768,38] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/FnLoaderThunk.java:[54,74] newInstance() in java.lang.Class has been deprecated
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Keyword.java:[26,70] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Keyword.java:[41,54] unchecked method invocation: constructor <init> in class java.lang.ref.WeakReference is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Keyword.java:[41,84] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/LazySeq.java:[193,16] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentHashMap.java:[474,40] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentList.java:[290,52] unchecked method invocation: method unmodifiableList in class java.util.Collections is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentList.java:[290,53] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentList.java:[290,53] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentList.java:[38,33] unchecked call to add(E) as a member of the raw type java.util.LinkedList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentList.java:[53,33] unchecked call to add(E) as a member of the raw type java.util.LinkedList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentTreeMap.java:[327,36] unchecked call to compare(T,T) as a member of the raw type java.util.Comparator
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/PersistentTreeMap.java:[864,35] unchecked call to push(E) as a member of the raw type java.util.Stack
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[141,55] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[159,42] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[386,50] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[388,58] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[390,52] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[406,31] unchecked call to addAll(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[417,44] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Reflector.java:[468,62] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/RT.java:[1695,32] unchecked call to add(E) as a member of the raw type java.util.ArrayList
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/RT.java:[2157,59] unchecked method invocation: method doPrivileged in class java.security.AccessController is applied to given types
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/RT.java:[2157,60] unchecked conversion
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/TransformerIterator.java:[175,17] unchecked call to add(E) as a member of the raw type java.util.Queue
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/TransformerIterator.java:[176,17] unchecked call to add(E) as a member of the raw type java.util.Queue
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/TransformerIterator.java:[180,17] unchecked call to add(E) as a member of the raw type java.util.Queue
+[[1;33mWARNING[m] /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm/clojure/lang/Util.java:[153,51] unchecked call to compareTo(T) as a member of the raw type java.lang.Comparable
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+----------------------------------------------------------------------
+Reflection warnings
+----------------------------------------------------------------------
+     [java] Reflection warning, clojure/core.clj:1711:7 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3625:22 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3639:14 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3653:14 - call to java.math.BigDecimal ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3871:11 - call to static method alength on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3878:11 - call to static method aclone on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3901:16 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3914:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3919:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3924:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3929:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3934:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3939:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3944:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3949:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3982:11 - call to static method aset on clojure.lang.RT can't be resolved (argument types: java.lang.Object, int, [Ljava.lang.Object;).
+     [java] Reflection warning, clojure/core.clj:5356:26 - call to method offer can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5415:47 - call to static method getType on clojure.asm.Type can't be resolved (argument types: java.lang.Object).
+     [java] Reflection warning, clojure/core.clj:5440:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5440:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5442:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5442:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5445:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core.clj:5445:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:632:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:632:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:632:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:632:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:633:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:633:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:69:14 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core_proxy.clj:237:68 - call to method getModifiers on clojure.asm.commons.Method can't be resolved (no such method).

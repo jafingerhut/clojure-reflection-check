@@ -1,0 +1,159 @@
+
+----------------------------------------------------------------------
+Software version info
+----------------------------------------------------------------------
+VERSION INFO BEGIN
++ uname -a
+Linux andyvm 5.4.0-54-generic #60~18.04.1-Ubuntu SMP Fri Nov 6 17:25:16 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
++ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.5 LTS
+Release:	18.04
+Codename:	bionic
++ java -version
+openjdk version "1.8.0_275"
+OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_275-b01)
+OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.275-b01, mixed mode)
++ mvn -version
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_275, vendor: AdoptOpenJDK, runtime: /home/andy/jdks/jdk8u275-b01/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.0-54-generic", arch: "amd64", family: "unix"
++ echo 'VERSION INFO END'
+VERSION INFO END
+
+----------------------------------------------------------------------
+BUILD FAILURE
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+[ERROR]
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+'Recompile with' messages
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+WARNINGS:
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+[WARNING]
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Reflection warnings
+----------------------------------------------------------------------
+     [java] Reflection warning, clojure/core.clj:1628:7 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:1628:7 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3531:22 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3531:22 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3545:14 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3545:14 - call to java.math.BigInteger ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3559:14 - call to java.math.BigDecimal ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3559:14 - call to java.math.BigDecimal ctor can't be resolved.
+     [java] Reflection warning, clojure/core.clj:3775:11 - call to static method alength on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3775:11 - call to static method alength on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3782:11 - call to static method aclone on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3782:11 - call to static method aclone on clojure.lang.RT can't be resolved (argument types: unknown).
+     [java] Reflection warning, clojure/core.clj:3793:16 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3805:16 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3805:16 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3818:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3818:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3823:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3823:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3828:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3828:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3833:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3833:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3838:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3838:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3843:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3843:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3848:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3848:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3853:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3853:1 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/core.clj:3886:11 - call to static method aset on clojure.lang.RT can't be resolved (argument types: java.lang.Object, int, [Ljava.lang.Object;).
+     [java] Reflection warning, clojure/core.clj:3886:11 - call to static method aset on clojure.lang.RT can't be resolved (argument types: java.lang.Object, int, [Ljava.lang.Object;).
+     [java] Reflection warning, clojure/core.clj:5205:26 - call to method offer can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5205:26 - call to method offer can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5264:47 - call to static method getType on clojure.asm.Type can't be resolved (argument types: java.lang.Object).
+     [java] Reflection warning, clojure/core.clj:5264:47 - call to static method getType on clojure.asm.Type can't be resolved (argument types: java.lang.Object).
+     [java] Reflection warning, clojure/core.clj:5289:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5289:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5289:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5289:25 - call to method visitParameterAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5291:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5291:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5291:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5291:25 - call to method visitAnnotation can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:5294:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core.clj:5294:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core.clj:5294:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core.clj:5294:16 - reference to field visitEnd can't be resolved.
+     [java] Reflection warning, clojure/core.clj:6776:22 - call to method getProperty can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:6776:22 - call to method getProperty can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:6786:9 - call to method contains can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core.clj:6786:9 - call to method contains can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/core_deftype.clj:617:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:37 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:617:62 - reference to field sym can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:618:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:618:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:618:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:618:39 - reference to field sym on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:69:14 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core_deftype.clj:69:14 - call to java.lang.IllegalArgumentException ctor can't be resolved.
+     [java] Reflection warning, clojure/core_proxy.clj:217:68 - call to method getModifiers on clojure.asm.commons.Method can't be resolved (no such method).
+     [java] Reflection warning, clojure/core_proxy.clj:217:68 - call to method getModifiers on clojure.asm.commons.Method can't be resolved (no such method).
+     [java] Reflection warning, clojure/data.clj:83:39 - reference to field getClass can't be resolved.
+     [java] Reflection warning, clojure/data.clj:83:39 - reference to field isArray can't be resolved.
+     [java] Reflection warning, clojure/data.clj:85:42 - reference to field getClass can't be resolved.
+     [java] Reflection warning, clojure/data.clj:85:42 - reference to field isArray can't be resolved.
+     [java] Reflection warning, clojure/inspector.clj:98:25 - call to javax.swing.JTree ctor can't be resolved.
+     [java] Reflection warning, clojure/java/browse.clj:54:9 - call to method browse on java.lang.Object can't be resolved (no such method).
+     [java] Reflection warning, clojure/java/browse_ui.clj:19:18 - call to javax.swing.JEditorPane ctor can't be resolved.
+     [java] Reflection warning, clojure/java/browse_ui.clj:26:41 - call to method processHTMLFrameHyperlinkEvent on javax.swing.text.Document can't be resolved (no such method).
+     [java] Reflection warning, clojure/main.clj:104:11 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:104:11 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:108:16 - call to method unread can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/main.clj:108:16 - call to method unread can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/main.clj:120:12 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:120:12 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:124:25 - reference to field readLine can't be resolved.
+     [java] Reflection warning, clojure/main.clj:124:25 - reference to field readLine can't be resolved.
+     [java] Reflection warning, clojure/main.clj:125:67 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:125:67 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/main.clj:126:16 - call to method unread can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/main.clj:126:16 - call to method unread can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/main.clj:155:12 - reference to field getStackTrace on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/main.clj:155:12 - reference to field getStackTrace on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/main.clj:156:41 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/main.clj:156:41 - call to static method aget on clojure.lang.RT can't be resolved (argument types: unknown, int).
+     [java] Reflection warning, clojure/main.clj:159:25 - reference to field getMessage on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/main.clj:159:25 - reference to field getMessage on java.lang.Object can't be resolved.
+     [java] Reflection warning, clojure/repl.clj:152:40 - reference to field read can't be resolved.
+     [java] Reflection warning, clojure/repl.clj:247:81 - reference to field getClassName can't be resolved.
+     [java] Reflection warning, clojure/repl.clj:263:23 - call to method stop can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/repl.clj:263:37 - call to java.lang.Error ctor can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:24:18 - reference to field getCause can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:32:15 - reference to field getClassName can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:33:9 - reference to field getMethodName can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:38:26 - reference to field getFileName can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:38:47 - reference to field getLineNumber can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:44:42 - reference to field getMessage can't be resolved.
+     [java] Reflection warning, clojure/stacktrace.clj:74:23 - reference to field getCause can't be resolved.
+     [java] Reflection warning, clojure/test/junit.clj:86:11 - call to method lastIndexOf can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/test/junit.clj:89:30 - call to method substring can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/test/junit.clj:89:8 - call to method substring can't be resolved (target class is unknown).
+     [java] Reflection warning, clojure/xml.clj:78:3 - call to method parse on javax.xml.parsers.SAXParser can't be resolved (argument types: unknown, unknown).

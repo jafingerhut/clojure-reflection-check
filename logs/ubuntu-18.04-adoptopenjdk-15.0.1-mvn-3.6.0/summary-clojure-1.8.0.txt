@@ -1,0 +1,73 @@
+
+----------------------------------------------------------------------
+Software version info
+----------------------------------------------------------------------
+VERSION INFO BEGIN
++ uname -a
+Linux andyvm 5.4.0-54-generic #60~18.04.1-Ubuntu SMP Fri Nov 6 17:25:16 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
++ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.5 LTS
+Release:	18.04
+Codename:	bionic
++ java -version
+openjdk version "15.0.1" 2020-10-20
+OpenJDK Runtime Environment AdoptOpenJDK (build 15.0.1+9)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 15.0.1+9, mixed mode, sharing)
++ mvn -version
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 15.0.1, vendor: AdoptOpenJDK, runtime: /home/andy/jdks/jdk-15.0.1+9
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.0-54-generic", arch: "amd64", family: "unix"
++ echo 'VERSION INFO END'
+VERSION INFO END
+
+----------------------------------------------------------------------
+BUILD FAILURE
+----------------------------------------------------------------------
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+
+----------------------------------------------------------------------
+[ERROR]
+----------------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;31mERROR[m] error: Source option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] error: Target option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m on project [36mclojure[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] error: Source option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] error: Target option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+----------------------------------------------------------------------
+'Recompile with' messages
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+WARNINGS:
+----------------------------------------------------------------------
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+----------------------------------------------------------------------
+[WARNING]
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Reflection warnings
+----------------------------------------------------------------------

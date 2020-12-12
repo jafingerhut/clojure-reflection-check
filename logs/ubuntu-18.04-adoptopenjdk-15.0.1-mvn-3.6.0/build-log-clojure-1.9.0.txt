@@ -1,0 +1,150 @@
+VERSION INFO BEGIN
++ uname -a
+Linux andyvm 5.4.0-54-generic #60~18.04.1-Ubuntu SMP Fri Nov 6 17:25:16 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
++ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.5 LTS
+Release:	18.04
+Codename:	bionic
++ java -version
+openjdk version "15.0.1" 2020-10-20
+OpenJDK Runtime Environment AdoptOpenJDK (build 15.0.1+9)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 15.0.1+9, mixed mode, sharing)
++ mvn -version
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 15.0.1, vendor: AdoptOpenJDK, runtime: /home/andy/jdks/jdk-15.0.1+9
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.0-54-generic", arch: "amd64", family: "unix"
++ echo 'VERSION INFO END'
+VERSION INFO END
++ '[' '!' -d clojure ']'
++ cp -pr clojure clojure-1.9.0
++ cd clojure-1.9.0
++ git checkout clojure-1.9.0
+Note: checking out 'clojure-1.9.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 841fa60b [maven-release-plugin] prepare release clojure-1.9.0
++ patch -p1
+patching file pom.xml
+patching file src/clj/clojure/core.clj
+patching file src/clj/clojure/core_deftype.clj
+patching file src/clj/clojure/core_proxy.clj
+patching file src/clj/clojure/data.clj
+patching file src/clj/clojure/edn.clj
+patching file src/clj/clojure/genclass.clj
+patching file src/clj/clojure/inspector.clj
+patching file src/clj/clojure/java/browse.clj
+patching file src/clj/clojure/java/browse_ui.clj
+patching file src/clj/clojure/java/io.clj
+patching file src/clj/clojure/java/javadoc.clj
+patching file src/clj/clojure/java/shell.clj
+patching file src/clj/clojure/main.clj
+patching file src/clj/clojure/parallel.clj
+patching file src/clj/clojure/pprint/cl_format.clj
+patching file src/clj/clojure/pprint/column_writer.clj
+patching file src/clj/clojure/pprint/dispatch.clj
+patching file src/clj/clojure/pprint/pprint_base.clj
+patching file src/clj/clojure/pprint/pretty_writer.clj
+patching file src/clj/clojure/pprint/print_table.clj
+patching file src/clj/clojure/pprint/utilities.clj
+patching file src/clj/clojure/reflect.clj
+patching file src/clj/clojure/reflect/java.clj
+patching file src/clj/clojure/repl.clj
+patching file src/clj/clojure/set.clj
+patching file src/clj/clojure/stacktrace.clj
+patching file src/clj/clojure/template.clj
+patching file src/clj/clojure/test.clj
+patching file src/clj/clojure/test/junit.clj
+patching file src/clj/clojure/test/tap.clj
+patching file src/clj/clojure/uuid.clj
+patching file src/clj/clojure/walk.clj
+patching file src/clj/clojure/xml.clj
+patching file src/clj/clojure/zip.clj
++ set +ex
+Clojure source files in src/clj/clojure, or subdirectories, with
+0 occurrences of (set! *warn-on-reflection* true):
+----------------------------------------------------------------------
+----------------------------------------------------------------------
++ mvn clean
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Inspecting build with total of 1 modules...
+[[1;34mINFO[m] Installing Nexus Staging features:
+[[1;34mINFO[m]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36morg.clojure:clojure[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding clojure 1.9.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mclojure[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.773 s
+[[1;34mINFO[m] Finished at: 2020-12-11T21:03:16-08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
++ mvn install
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Inspecting build with total of 1 modules...
+[[1;34mINFO[m] Installing Nexus Staging features:
+[[1;34mINFO[m]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36morg.clojure:clojure[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding clojure 1.9.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:1.5:add-source[m [1m(add-clojure-source-dirs)[m @ [36mclojure[0;1m ---[m
+[[1;34mINFO[m] Source directory: /home/andy/clj/clojure-reflection-check/clojure-1.9.0/src/jvm added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mclojure[0;1m ---[m
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 43 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mclojure[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 169 source files to /home/andy/clj/clojure-reflection-check/clojure-1.9.0/target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] Source option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] Target option 6 is no longer supported. Use 7 or later.
+[[1;34mINFO[m] 2 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.579 s
+[[1;34mINFO[m] Finished at: 2020-12-11T21:03:19-08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.1:compile[m [1m(default-compile)[m on project [36mclojure[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] Source option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] Target option 6 is no longer supported. Use 7 or later.
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

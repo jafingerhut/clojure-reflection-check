@@ -1,3 +1,18 @@
+diff --git a/pom.xml b/pom.xml
+index 28fa5b07..e96ad5c6 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -105,6 +105,10 @@
+ 	<artifactId>maven-compiler-plugin</artifactId>
+ 	<version>3.1</version>
+ 	<configuration>
++	  <compilerArgs>
++	    <arg>-Xlint:deprecation</arg>
++	    <arg>-Xlint:unchecked</arg>
++	  </compilerArgs>
+ 	  <source>1.8</source>
+ 	  <target>1.8</target>
+ 	  <encoding>UTF-8</encoding>
 diff --git a/src/clj/clojure/core.clj b/src/clj/clojure/core.clj
 index 8e98e072..c47eb3ee 100644
 --- a/src/clj/clojure/core.clj

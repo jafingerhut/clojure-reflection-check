@@ -19,4 +19,5 @@ lines:
 ./scripts/build.sh clojure-1.10.0 logs
 ./scripts/build.sh clojure-1.10.1 logs
 ./scripts/build.sh clojure-1.10.2-rc1 logs
+./scripts/build.sh clojure-1.10.2-rc2 logs
 ```

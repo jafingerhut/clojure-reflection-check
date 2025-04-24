@@ -1,0 +1,432 @@
+diff --git a/pom.xml b/pom.xml
+index c0bb9c1f..ec44f318 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -105,6 +105,10 @@
+ 	<artifactId>maven-compiler-plugin</artifactId>
+ 	<version>3.1</version>
+ 	<configuration>
++	  <compilerArgs>
++	    <arg>-Xlint:deprecation</arg>
++	    <arg>-Xlint:unchecked</arg>
++	  </compilerArgs>
+ 	  <source>1.8</source>
+ 	  <target>1.8</target>
+ 	  <encoding>UTF-8</encoding>
+diff --git a/src/clj/clojure/core.clj b/src/clj/clojure/core.clj
+index 1e7c6977..cae88c89 100644
+--- a/src/clj/clojure/core.clj
++++ b/src/clj/clojure/core.clj
+@@ -10,6 +10,8 @@
+        :author "Rich Hickey"}
+   clojure.core)
+ 
++(set! *warn-on-reflection* true)
++
+ (def unquote)
+ (def unquote-splicing)
+ 
+diff --git a/src/clj/clojure/core_deftype.clj b/src/clj/clojure/core_deftype.clj
+index c2babab2..a9e4c262 100644
+--- a/src/clj/clojure/core_deftype.clj
++++ b/src/clj/clojure/core_deftype.clj
+@@ -8,6 +8,8 @@
+ 
+ (in-ns 'clojure.core)
+ 
++(set! *warn-on-reflection* true)
++
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;; definterface ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ (defn namespace-munge
+diff --git a/src/clj/clojure/core_proxy.clj b/src/clj/clojure/core_proxy.clj
+index 46f7b4b8..9030958c 100644
+--- a/src/clj/clojure/core_proxy.clj
++++ b/src/clj/clojure/core_proxy.clj
+@@ -8,6 +8,8 @@
+ 
+ (in-ns 'clojure.core)
+ 
++(set! *warn-on-reflection* true)
++
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;; proxy ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ (import
+diff --git a/src/clj/clojure/edn.clj b/src/clj/clojure/edn.clj
+index 6d1634af..8c4e7a3a 100644
+--- a/src/clj/clojure/edn.clj
++++ b/src/clj/clojure/edn.clj
+@@ -11,6 +11,8 @@
+   clojure.edn
+   (:refer-clojure :exclude [read read-string]))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn read
+   "Reads the next object from stream, which must be an instance of
+   java.io.PushbackReader or some derivee.  stream defaults to the
+@@ -43,4 +45,4 @@
+   opts is a map as per clojure.edn/read"
+   {:added "1.5"}
+   ([s] (read-string {:eof nil} s))
+-  ([opts s] (when s (clojure.lang.EdnReader/readString s opts))))
+\ No newline at end of file
++  ([opts s] (when s (clojure.lang.EdnReader/readString s opts))))
+diff --git a/src/clj/clojure/genclass.clj b/src/clj/clojure/genclass.clj
+index a4fa0ec5..3b7695fc 100644
+--- a/src/clj/clojure/genclass.clj
++++ b/src/clj/clojure/genclass.clj
+@@ -8,6 +8,8 @@
+ 
+ (in-ns 'clojure.core)
+ 
++(set! *warn-on-reflection* true)
++
+ (import '(java.lang.reflect Modifier Constructor)
+         '(clojure.asm ClassWriter ClassVisitor Opcodes Type)
+         '(clojure.asm.commons Method GeneratorAdapter)
+diff --git a/src/clj/clojure/inspector.clj b/src/clj/clojure/inspector.clj
+index bd84d9a8..58a4b4de 100644
+--- a/src/clj/clojure/inspector.clj
++++ b/src/clj/clojure/inspector.clj
+@@ -16,6 +16,8 @@
+      (javax.swing.table TableModel AbstractTableModel)
+      (javax.swing JPanel JTree JTable JScrollPane JFrame JToolBar JButton SwingUtilities)))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn atom? [x]
+   (not (coll? x)))
+ 
+diff --git a/src/clj/clojure/java/browse.clj b/src/clj/clojure/java/browse.clj
+index 6a16ce37..ab724900 100644
+--- a/src/clj/clojure/java/browse.clj
++++ b/src/clj/clojure/java/browse.clj
+@@ -16,6 +16,8 @@
+            (java.net URI)
+            (java.lang ProcessBuilder ProcessBuilder$Redirect)))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn- macosx? []
+   (-> "os.name" System/getProperty .toLowerCase
+     (.startsWith "mac os x")))
+diff --git a/src/clj/clojure/java/browse_ui.clj b/src/clj/clojure/java/browse_ui.clj
+index 2c002a29..9889a891 100644
+--- a/src/clj/clojure/java/browse_ui.clj
++++ b/src/clj/clojure/java/browse_ui.clj
+@@ -12,6 +12,8 @@
+             Prevents console apps from becoming GUI unnecessarily."}
+   clojure.java.browse-ui)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn- open-url-in-swing
+   [url]
+   (let [htmlpane (javax.swing.JEditorPane. url)]
+diff --git a/src/clj/clojure/java/io.clj b/src/clj/clojure/java/io.clj
+index 72a30ed7..67ea1e04 100644
+--- a/src/clj/clojure/java/io.clj
++++ b/src/clj/clojure/java/io.clj
+@@ -21,6 +21,8 @@
+               CharArrayReader Closeable)
+      (java.net URI URL MalformedURLException Socket URLDecoder URLEncoder)))
+ 
++(set! *warn-on-reflection* true)
++
+ (def
+     ^{:doc "Type object for a Java primitive byte array."
+       :private true
+diff --git a/src/clj/clojure/java/javadoc.clj b/src/clj/clojure/java/javadoc.clj
+index c36acc3d..ffac0026 100644
+--- a/src/clj/clojure/java/javadoc.clj
++++ b/src/clj/clojure/java/javadoc.clj
+@@ -13,6 +13,8 @@
+   (:import
+    (java.io File)))
+ 
++(set! *warn-on-reflection* true)
++
+ (def ^:dynamic *feeling-lucky-url* "http://www.google.com/search?btnI=I%27m%20Feeling%20Lucky&q=allinurl:")
+ (def ^:dynamic *feeling-lucky* true)
+ 
+diff --git a/src/clj/clojure/java/shell.clj b/src/clj/clojure/java/shell.clj
+index cb3f90a2..5378d161 100644
+--- a/src/clj/clojure/java/shell.clj
++++ b/src/clj/clojure/java/shell.clj
+@@ -15,6 +15,8 @@ collecting its stdout"}
+   (:import (java.io ByteArrayOutputStream StringWriter)
+            (java.nio.charset Charset)))
+ 
++(set! *warn-on-reflection* true)
++
+ (def ^:dynamic *sh-dir* nil)
+ (def ^:dynamic *sh-env* nil)
+ 
+diff --git a/src/clj/clojure/main.clj b/src/clj/clojure/main.clj
+index e769ee56..790d9348 100644
+--- a/src/clj/clojure/main.clj
++++ b/src/clj/clojure/main.clj
+@@ -21,6 +21,8 @@
+   ;;(:use [clojure.repl :only (demunge root-cause stack-element-str)])
+   )
+ 
++(set! *warn-on-reflection* true)
++
+ (declare main)
+ 
+ ;;;;;;;;;;;;;;;;;;; redundantly copied from clojure.repl to avoid dep ;;;;;;;;;;;;;;
+diff --git a/src/clj/clojure/parallel.clj b/src/clj/clojure/parallel.clj
+index 29b01e21..996f2678 100644
+--- a/src/clj/clojure/parallel.clj
++++ b/src/clj/clojure/parallel.clj
+@@ -9,6 +9,8 @@
+ (ns ^{:doc "DEPRECATED Wrapper of the ForkJoin library (JSR-166)."
+        :author "Rich Hickey"}
+     clojure.parallel)
++
++(set! *warn-on-reflection* true)
+ (alias 'parallel 'clojure.parallel)
+ 
+ (comment "
+@@ -247,4 +249,4 @@ pvec.
+ (time (preduce + 0 (par v :map-index *)))
+ (time (preduce + 0 (par v :map  #(* % %))))
+ (time (reduce + 0 (map #(* % %) v)))
+-)
+\ No newline at end of file
++)
+diff --git a/src/clj/clojure/pprint/cl_format.clj b/src/clj/clojure/pprint/cl_format.clj
+index 1399e3ad..5f4a9698 100644
+--- a/src/clj/clojure/pprint/cl_format.clj
++++ b/src/clj/clojure/pprint/cl_format.clj
+@@ -18,6 +18,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ ;;; Forward references
+ (declare compile-format)
+ (declare execute-format)
+diff --git a/src/clj/clojure/pprint/column_writer.clj b/src/clj/clojure/pprint/column_writer.clj
+index 704fc0c3..cd065155 100644
+--- a/src/clj/clojure/pprint/column_writer.clj
++++ b/src/clj/clojure/pprint/column_writer.clj
+@@ -17,6 +17,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ (import [clojure.lang IDeref]
+         [java.io Writer])
+ 
+diff --git a/src/clj/clojure/pprint/dispatch.clj b/src/clj/clojure/pprint/dispatch.clj
+index 965c0b25..64422363 100644
+--- a/src/clj/clojure/pprint/dispatch.clj
++++ b/src/clj/clojure/pprint/dispatch.clj
+@@ -17,6 +17,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn- use-method
+   "Installs a function as a new method of multimethod associated with dispatch-value. "
+   [^clojure.lang.MultiFn multifn dispatch-val func]
+diff --git a/src/clj/clojure/pprint/pprint_base.clj b/src/clj/clojure/pprint/pprint_base.clj
+index d95bd261..403be672 100644
+--- a/src/clj/clojure/pprint/pprint_base.clj
++++ b/src/clj/clojure/pprint/pprint_base.clj
+@@ -16,6 +16,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; Variables that control the pretty printer
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+diff --git a/src/clj/clojure/pprint/pretty_writer.clj b/src/clj/clojure/pprint/pretty_writer.clj
+index 49023b82..ae7b0b3f 100644
+--- a/src/clj/clojure/pprint/pretty_writer.clj
++++ b/src/clj/clojure/pprint/pretty_writer.clj
+@@ -17,6 +17,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ (import [clojure.lang IDeref]
+         [java.io Writer])
+ 
+diff --git a/src/clj/clojure/pprint/print_table.clj b/src/clj/clojure/pprint/print_table.clj
+index 337f45d0..52f81903 100644
+--- a/src/clj/clojure/pprint/print_table.clj
++++ b/src/clj/clojure/pprint/print_table.clj
+@@ -8,6 +8,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn print-table
+   "Prints a collection of maps in a textual table. Prints table headings
+    ks, and then a line of output for each row, corresponding to the keys
+diff --git a/src/clj/clojure/pprint/utilities.clj b/src/clj/clojure/pprint/utilities.clj
+index 95655bd6..293e95fb 100644
+--- a/src/clj/clojure/pprint/utilities.clj
++++ b/src/clj/clojure/pprint/utilities.clj
+@@ -17,6 +17,8 @@
+ 
+ (in-ns 'clojure.pprint)
+ 
++(set! *warn-on-reflection* true)
++
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;; Helper functions for digesting formats in the various
+ ;;; phases of their lives.
+diff --git a/src/clj/clojure/reflect.clj b/src/clj/clojure/reflect.clj
+index 11050977..c9e57d84 100644
+--- a/src/clj/clojure/reflect.clj
++++ b/src/clj/clojure/reflect.clj
+@@ -41,6 +41,8 @@ Platform implementers must:
+   clojure.reflect
+   (:require [clojure.set :as set]))
+ 
++(set! *warn-on-reflection* true)
++
+ (defprotocol Reflector
+   "Protocol for reflection implementers."
+   (do-reflect [reflector typeref]))
+diff --git a/src/clj/clojure/repl.clj b/src/clj/clojure/repl.clj
+index 533559b7..0074cfc5 100644
+--- a/src/clj/clojure/repl.clj
++++ b/src/clj/clojure/repl.clj
+@@ -16,6 +16,8 @@
+   (:import (java.io LineNumberReader InputStreamReader PushbackReader)
+            (clojure.lang RT Reflector)))
+ 
++(set! *warn-on-reflection* true)
++
+ (def ^:private special-doc-map
+   '{. {:url "java_interop#dot"
+        :forms [(.instanceMember instance args*)
+diff --git a/src/clj/clojure/set.clj b/src/clj/clojure/set.clj
+index 9ffb7290..484e2389 100644
+--- a/src/clj/clojure/set.clj
++++ b/src/clj/clojure/set.clj
+@@ -10,6 +10,8 @@
+        :author "Rich Hickey"}
+        clojure.set)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn- bubble-max-key
+   "Move a maximal element of coll according to fn k (which returns a
+   number) to the front of coll."
+diff --git a/src/clj/clojure/template.clj b/src/clj/clojure/template.clj
+index bda8eae4..43399db0 100644
+--- a/src/clj/clojure/template.clj
++++ b/src/clj/clojure/template.clj
+@@ -27,6 +27,8 @@
+   clojure.template
+   (:require [clojure.walk :as walk]))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn apply-template
+   "For use in macros.  argv is an argument list, as in defn.  expr is
+   a quoted expression using the symbols in argv.  values is a sequence
+diff --git a/src/clj/clojure/test.clj b/src/clj/clojure/test.clj
+index fc3536d7..2ad23e9a 100644
+--- a/src/clj/clojure/test.clj
++++ b/src/clj/clojure/test.clj
+@@ -236,6 +236,8 @@
+             [clojure.stacktrace :as stack]
+             [clojure.string :as str]))
+ 
++(set! *warn-on-reflection* true)
++
+ ;; Nothing is marked "private" here, so you can rebind things to plug
+ ;; in your own testing or reporting frameworks.
+ 
+diff --git a/src/clj/clojure/test/junit.clj b/src/clj/clojure/test/junit.clj
+index 3d129b18..d073b458 100644
+--- a/src/clj/clojure/test/junit.clj
++++ b/src/clj/clojure/test/junit.clj
+@@ -38,6 +38,8 @@
+   (:require [clojure.stacktrace :as stack]
+             [clojure.test :as t]))
+ 
++(set! *warn-on-reflection* true)
++
+ ;; copied from clojure.contrib.lazy-xml
+ (def ^{:private true}
+      escape-xml-map
+diff --git a/src/clj/clojure/test/tap.clj b/src/clj/clojure/test/tap.clj
+index c3a3a820..f41d958a 100644
+--- a/src/clj/clojure/test/tap.clj
++++ b/src/clj/clojure/test/tap.clj
+@@ -42,6 +42,8 @@
+   (:require [clojure.test :as t]
+             [clojure.stacktrace :as stack]))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn print-tap-plan
+   "Prints a TAP plan line like '1..n'.  n is the number of tests"
+   {:added "1.1"}
+diff --git a/src/clj/clojure/uuid.clj b/src/clj/clojure/uuid.clj
+index dbaa9d14..f2923e62 100644
+--- a/src/clj/clojure/uuid.clj
++++ b/src/clj/clojure/uuid.clj
+@@ -8,6 +8,8 @@
+ 
+ (ns clojure.uuid)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn- default-uuid-reader [form]
+   {:pre [(string? form)]}
+   (java.util.UUID/fromString form))
+diff --git a/src/clj/clojure/walk.clj b/src/clj/clojure/walk.clj
+index fe8fb631..bf7c2d4c 100644
+--- a/src/clj/clojure/walk.clj
++++ b/src/clj/clojure/walk.clj
+@@ -32,6 +32,8 @@ created with sorted-map-by.  There is no (obvious) way to retrieve
+ the sorting function."}
+   clojure.walk)
+ 
++(set! *warn-on-reflection* true)
++
+ (defn walk
+   "Traverses form, an arbitrary data structure.  inner and outer are
+   functions.  Applies inner to each element of form, building up a
+diff --git a/src/clj/clojure/xml.clj b/src/clj/clojure/xml.clj
+index d892e192..63d2d409 100644
+--- a/src/clj/clojure/xml.clj
++++ b/src/clj/clojure/xml.clj
+@@ -12,6 +12,8 @@
+   (:import (org.xml.sax ContentHandler Attributes SAXException)
+            (javax.xml.parsers SAXParser SAXParserFactory)))
+ 
++(set! *warn-on-reflection* true)
++
+ (def ^:dynamic *stack*)
+ (def ^:dynamic *current*)
+ (def ^:dynamic *state*) ; :element :chars :between
+diff --git a/src/clj/clojure/zip.clj b/src/clj/clojure/zip.clj
+index 7848ab06..0e6ccd34 100644
+--- a/src/clj/clojure/zip.clj
++++ b/src/clj/clojure/zip.clj
+@@ -15,6 +15,8 @@
+   clojure.zip
+   (:refer-clojure :exclude (replace remove next)))
+ 
++(set! *warn-on-reflection* true)
++
+ (defn zipper
+   "Creates a new zipper structure. 
+ 
